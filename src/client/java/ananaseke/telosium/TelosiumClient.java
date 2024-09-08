@@ -14,16 +14,6 @@ public class TelosiumClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         LOGGER.info("Initializing Telosium Client");
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            if (client.player == null) return;
-            if (!client.options.attackKey.isPressed()) return;
-
-            Item heldItem = client.player.getMainHandStack().getItem();
-
-            if (!(heldItem instanceof ToolItem)) return;
-            if (client.player.getItemCooldownManager().isCoolingDown(heldItem)) return;
-
-            client.player.swingHand(client.player.getActiveHand());
-        });
+        new Autoswing().onInitializeClient();
     }
 }
