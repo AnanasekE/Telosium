@@ -1,6 +1,6 @@
 # Telosium
 
-Telosium is a quality of life mod for Telos Realms adding some simple features like:
+Telosium is a quality of life mod for Telos Realms (1.21.1 fabric) adding some simple features like:
 - Weapon auto-click while holding attack button (Allowed by server)
 
 Contributions are welcome!
